@@ -1,3 +1,5 @@
 .idea/
 venv
 log
+caxton_dataset
+data
