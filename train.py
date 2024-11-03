@@ -3,14 +3,14 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader, Subset
 from torchvision import transforms
-from dataset.custom_dataset import CustomDataset  # Import CustomDataset class
+from custom_dataset import CustomDataset  # Import CustomDataset class
 from models.cnn_models import SimpleCNN  # Import SimpleCNN model
 from tqdm import tqdm  # Import tqdm for progress visualization
 import numpy as np
 
 # Define the transformations for the images
 transform = transforms.Compose([
-    transforms.Resize((128, 128)),  # Resize images to 128x128 pixels
+    transforms.Resize((224, 224)),  # Resize images to 128x128 pixels
     transforms.ToTensor(),  # Convert images to PyTorch tensors
 ])
 
