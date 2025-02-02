@@ -1,3 +1,4 @@
+from torchsummary import summary
 import torch
 import torch.nn as nn
 
@@ -34,3 +35,12 @@ class SimpleCNN(nn.Module):
         x = self.classifier(x)
         return x
 
+# Create an instance of the model
+model = SimpleCNN(num_classes=3)
+
+# Print the architecture of the model
+print("Model Architecture:")
+print(model)
+
+# Print the summary of the model
+summary(model, input_size=(3, 224, 224))  # Adjust input size as per your data
