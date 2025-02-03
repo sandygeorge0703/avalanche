@@ -3,7 +3,7 @@
 
 # ## Import libraries
 
-# In[ ]:
+# In[68]:
 
 
 import os
@@ -44,7 +44,7 @@ random.seed(seed)
 
 # ## Define filepaths as constant
 
-# In[ ]:
+# In[69]:
 
 
 # Define file paths as constants
@@ -57,7 +57,7 @@ root_dir = r'C:\Users\Sandhra George\avalanche\caxton_dataset\print24'  # Path t
 
 # ## Load data into DataFrame and filter print24
 
-# In[ ]:
+# In[70]:
 
 
 # Load data into a DataFrame for easier processing
@@ -83,7 +83,7 @@ print(data_filtered.tail())
 
 # ## Analysing the target hotend temperature column
 
-# In[ ]:
+# In[71]:
 
 
 # Extract unique temperatures in the 'target_hotend' column and sort them
@@ -102,7 +102,7 @@ print(f"Temperature range: {temperature_min} to {temperature_max}")
 
 # ## Create a random temperature sub list
 
-# In[ ]:
+# In[72]:
 
 
 # Check if we have enough unique temperatures to select from
@@ -131,7 +131,7 @@ else:
 
 # ## Create a new dataframe with equal class distribution
 
-# In[ ]:
+# In[73]:
 
 
 # Initialise a dictionary to store DataFrames for each class
@@ -191,7 +191,7 @@ for class_id in [0, 1, 2]:
 
 # ## Convert balanced_dataset into a dataframe that contains only the img_path and hotend_class
 
-# In[ ]:
+# In[74]:
 
 
 # Assuming the previous steps for balancing the dataset are already done...
@@ -211,7 +211,7 @@ print(balanced_dataset_filtered.tail())
 #balanced_dataset_filtered.to_csv('balanced_dataset_filtered.csv', index=False)
 
 
-# In[ ]:
+# In[75]:
 
 
 # Check class distribution in balanced_dataset
@@ -219,7 +219,7 @@ class_distribution = balanced_dataset_filtered['hotend_class'].value_counts()
 print(class_distribution)
 
 
-# In[ ]:
+# In[76]:
 
 
 # Print the indices, the classes, and the number of images in each class
@@ -258,7 +258,7 @@ print(f"Samples per class: {samples_per_class}")
 
 # ## Create training, validation, and testing datasets
 
-# In[ ]:
+# In[77]:
 
 
 # Number of images in each class (this will be the same after balancing)
@@ -318,7 +318,7 @@ print("Validation set size:", len(valid_indices))
 print("Test set size:", len(test_indices))
 
 
-# In[ ]:
+# In[78]:
 
 
 # Create DataFrames for train, validation, and test sets based on the indices
@@ -339,7 +339,7 @@ print(test_data.head())
 
 # ## Check for Missing or Invalid Labels in Training, Validation, and Test Data
 
-# In[ ]:
+# In[79]:
 
 
 # Check for any missing labels or invalid labels
@@ -356,7 +356,7 @@ print(test_data['hotend_class'].unique())  # Check unique labels to ensure there
 
 # ## Balanced Dataset class
 
-# In[ ]:
+# In[80]:
 
 
 # Define the dataset class
@@ -431,7 +431,7 @@ class BalancedDataset(Dataset):
 
 # ## Balanced Batch Sampler class
 
-# In[ ]:
+# In[81]:
 
 
 class BalancedBatchSampler(Sampler):
@@ -497,7 +497,7 @@ class BalancedBatchSampler(Sampler):
         return self.num_samples_per_epoch // self.batch_size
 
 
-# In[ ]:
+# In[82]:
 
 
 # Create the dataset instance (make sure to provide the right data_frame and root directory)
@@ -524,7 +524,7 @@ print(f"Test dataset length: {len(test_loader.dataset)}")
 
 # ## Check the class distribution of randomly selected batches in train loader
 
-# In[ ]:
+# In[84]:
 
 
 # Function to print random batches and their class distribution
@@ -565,7 +565,7 @@ print_random_batches(train_loader, num_batches=5)
 
 # ## Check class distribution of random batches from training, validation and testing data
 
-# In[ ]:
+# In[85]:
 
 
 def print_label_batch_from_loader(loader, dataset_name):
@@ -587,35 +587,47 @@ print_label_batch_from_loader(test_loader, 'Test')
 
 # ## Setting up a new folder for each experiment
 
-# In[ ]:
+# In[86]:
 
 
-# Automatically create a new experiment folder
-base_dir = os.getcwd()  # Change if needed
-exp_num = 1
+import os
+import torch
 
-# Find the next available experiment folder
-while os.path.exists(os.path.join(base_dir, f"experiment_{exp_num:02d}")):
-    exp_num += 1  
+# Set base directory
+base_dir = "experiments"
+os.makedirs(base_dir, exist_ok=True)
 
-experiment_folder = os.path.join(base_dir, f"experiment_{exp_num:02d}")
-os.makedirs(experiment_folder)
+# Function to get the next experiment folder
+def get_experiment_folder(exp_num):
+    return os.path.join(base_dir, f"Experiment_{exp_num:02d}")  # Keeps two-digit format (01, 02, ..., 10)
+
+# Set initial experiment number
+experiment_num = 1
+experiment_folder = get_experiment_folder(experiment_num)
+
+# Create the main experiment directory if it doesn't exist
+os.makedirs(experiment_folder, exist_ok=True)
+
+# Set model path inside experiment folder
+model_path = os.path.join(experiment_folder, "best_model.pth")
 
 # Create subdirectories for training, validation, and test confusion matrices
 train_folder = os.path.join(experiment_folder, "training_confusion_matrices")
 val_folder = os.path.join(experiment_folder, "validation_confusion_matrices")
 test_folder = os.path.join(experiment_folder, "test_confusion_matrices")
 
-os.makedirs(train_folder)
-os.makedirs(val_folder)
-os.makedirs(test_folder)
+# Ensure that the subdirectories exist
+os.makedirs(train_folder, exist_ok=True)
+os.makedirs(val_folder, exist_ok=True)
+os.makedirs(test_folder, exist_ok=True)
 
-print(f"Experiment {exp_num:02d} - Saving results to: {experiment_folder}")
+# Print the directory where results will be saved
+print(f"Saving results to: {experiment_folder}")
 
 
 # ## Display a Random Image from the Dataset with Its Label
 
-# In[ ]:
+# In[87]:
 
 
 import matplotlib.pyplot as plt
@@ -645,7 +657,7 @@ plt.clf()
 print(f"Image saved to: {output_path}")
 
 
-# In[ ]:
+# In[88]:
 
 
 # Ensure that image paths and labels are correctly aligned
@@ -665,7 +677,7 @@ print(f"Last Image Path: {last_image}, Last Label: {last_label}")
 
 # ## Printing Class Distribution for Training, Validation, and Test Data
 
-# In[ ]:
+# In[89]:
 
 
 # Function to print class distribution
@@ -697,309 +709,326 @@ print_class_distribution(test_loader, 'Test')
 
 # ## Model Training, Validation, and Testing with Class Distribution and Learning Rate Scheduling
 
-# In[ ]:
+# In[93]:
 
 
-# Set device to GPU if available
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+import csv
 
-# Move model to device
-model = SimpleCNN(num_classes=3).to(device)
-
-# Option to load a pretrained model or start fresh
-load_pretrained = False  # Set to False if you want to start with a new model
-
-# Load the model if exists
-model_path = "best_model.pth"
-if load_pretrained and os.path.exists(model_path):
-    print(f"Loading pretrained model from {model_path}...")
-    model.load_state_dict(torch.load(model_path, map_location=device, weights_only=True))
-else:
-    print("Starting with a new model...")
-
-# Load best validation accuracy safely
-if load_pretrained and os.path.exists(model_path):
-    checkpoint = torch.load(model_path, map_location=device, weights_only=True)
-    best_val_accuracy = checkpoint.get('best_val_accuracy', 0.0) if isinstance(checkpoint, dict) else 0.0
-else:
-    best_val_accuracy = 0.0
-
-# Training parameters
-num_epochs = 100  # Adjust as needed
-class_weights = torch.tensor([1.0, 1.0, 1.0]).to(device)  # Update these based on your class distribution
-criterion = torch.nn.CrossEntropyLoss()
-optimizer = optim.Adam(model.parameters(), lr=0.0001, weight_decay=1e-5)  # Adjust learning rate if needed
-# **Add the learning rate scheduler here**
-scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.1)  # Decrease LR every 10 epochs by a factor of 0.1
-
-# Initialize confusion matrix trackers
-num_classes = 3
-train_cm = ConfusionMatrix(task='multiclass', num_classes=num_classes).to(device)
-val_cm = ConfusionMatrix(task='multiclass',num_classes=num_classes).to(device)
-
-# Store losses for plotting
-train_losses = []
-val_losses = []
-
-# Training loop
-for epoch in range(num_epochs):
-    print(f"\nEpoch {epoch + 1}/{num_epochs}")
-    model.train()  # Set model to training mode
-    running_loss = 0.0
-    correct_predictions = 0
-    total_samples = 0
-    class_counts = [0] * 3  # Assuming 3 classes, update if needed
-
-    # Training phase with tqdm progress bar
-    for images, labels, _ in tqdm(train_loader, desc="Training", leave=False):
-        images, labels = images.to(device), labels.to(device)
-
-        # Zero the parameter gradients
-        optimizer.zero_grad()
-
-        # Forward pass
-        outputs = model(images)
-        print(f"Outputs (Raw): {outputs}")  # Log raw outputs
-        loss = criterion(outputs, labels)
-        
-        # Backward pass and optimization
-        loss.backward()
-        optimizer.step()
-
-        # Track training loss and accuracy
-        running_loss += loss.item() * images.size(0)
-        _, predicted = torch.max(outputs, 1)
-        correct_predictions += (predicted == labels).sum().item()
-        total_samples += labels.size(0)
-        
-        # Update confusion matrix
-        train_cm.update(predicted, labels)
-
-        # Update class counts
-        for label in labels:
-            class_counts[label.item()] += 1
-        
-        # Print predicted vs actual labels for each batch
-        for i in range(len(labels)):
-            print(f"Predicted: {predicted[i].item()}, Actual: {labels[i].item()}")
-
-    epoch_loss = running_loss / total_samples
-    epoch_accuracy = correct_predictions / total_samples
-    print(f"Training Loss: {epoch_loss:.4f}, Training Accuracy: {epoch_accuracy:.4f}")
+# Training loop across 10 experiments
+while experiment_num <= 10:
+    print(f"\nStarting {experiment_folder}...\n")   
+   
+    # Set device to GPU if available
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     
-    # Print class distribution during training
-    print(f"Training Class Distribution: {class_counts}")
+    # Move model to device
+    model = SimpleCNN(num_classes=3).to(device)
     
-    # **Call the scheduler here at the end of each epoch to update the learning rate**
-    scheduler.step()
-
-    # Store training loss for plotting
-    train_losses.append(epoch_loss)
+    # Training parameters
+    class_weights = torch.tensor([1.0, 1.0, 1.0]).to(device)  # Update these based on your class distribution
+    criterion = torch.nn.CrossEntropyLoss()
+    optimizer = optim.Adam(model.parameters(), lr=0.0001, weight_decay=1e-5)  # Adjust learning rate if needed
+    # **Add the learning rate scheduler here**
+    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.1)  # Decrease LR every 10 epochs by a factor of 0.1
     
-    # Compute and plot confusion matrix for training
-    cm_train = train_cm.compute()
-    print(f"Training Confusion Matrix:\n{cm_train}")
-    sns.heatmap(cm_train.cpu().numpy(), annot=True, fmt="d", cmap="Blues", 
-                xticklabels=range(num_classes), yticklabels=range(num_classes))
-    plt.xlabel('Predicted')
-    plt.ylabel('Actual')
-    plt.title(f'Training Confusion Matrix - Epoch {epoch + 1}')
-    output_path_train = os.path.join(train_folder, f"training_confusion_matrix_epoch_{epoch + 1}.png")
-    plt.savefig(output_path_train)  # Save the plot
-    plt.clf()  # Clear the plot for the next iteration
-    print(f"Training Confusion Matrix saved to: {output_path_train}")
-
-    train_cm.reset()  # Reset confusion matrix tracker for next epoch
-    print(f"Training Loss: {epoch_loss:.4f}, Training Accuracy: {epoch_accuracy:.4f}")
-
-    # Validation phase with tqdm progress bar
-    model.eval()  # Set model to evaluation mode
-    val_loss = 0.0
-    val_correct_predictions = 0
-    val_total_samples = 0
-    val_class_counts = [0] * 3  # Assuming 3 classes, update if needed
-
-    with torch.no_grad():  # Disable gradient computation for validation
-        for images, labels, _ in tqdm(val_loader, desc="Validating", leave=False):
+    # Initialise confusion matrix trackers
+    num_classes = 3
+    train_cm = ConfusionMatrix(task='multiclass', num_classes=num_classes).to(device)
+    val_cm = ConfusionMatrix(task='multiclass',num_classes=num_classes).to(device)
+    
+    # Store losses for plotting
+    train_losses = []
+    val_losses = []
+    
+    # Set experiment parameters
+    num_epochs = 100  # Total epochs to train
+    load_pretrained = True  # Set to True to resume training
+    model_path = "best_model.pth"
+    
+    # Initialise training variables
+    start_epoch = checkpoint['epoch']
+    best_val_accuracy = checkpoint['best_val_accuracy']
+    
+    if load_pretrained and os.path.exists(model_path):
+    	print(f"Loading pretrained model from {model_path}...")
+    	checkpoint = torch.load(model_path, map_location=device, weights_only=True)
+    
+    # Print the checkpoint keys to check its contents
+    	print(f"Checkpoint keys: {checkpoint.keys()}")
+    
+    	# If the checkpoint contains 'model_state' (which is the standard key for model weights)
+    	if 'model_state' in checkpoint:
+        	model.load_state_dict(checkpoint['model_state'])  # Load the model weights
+        	optimizer.load_state_dict(checkpoint['optimizer_state'])
+        	scheduler.load_state_dict(checkpoint['scheduler_state'])
+        
+        	# Optionally, load epoch and best validation accuracy values from checkpoint
+        	start_epoch = checkpoint['epoch']
+        	best_val_accuracy = checkpoint['best_val_accuracy']
+        
+        	print(f"Loaded model weights from checkpoint, resuming from epoch {start_epoch + 1}...")
+    	else:
+        	print("No valid model weights found in checkpoint. Starting fresh.")
+        	start_epoch = 0
+        	best_val_accuracy = 0.0
+    else:
+	# If no pretrained model is loaded, start fresh
+    	start_epoch = 0
+    	best_val_accuracy = 0.0
+    	print("Starting fresh, no pretrained model loaded.")
+    
+    # Ensure the experiment folder exists
+    os.makedirs(experiment_folder, exist_ok=True)
+    
+    # Create the CSV file path (inside the experiment folder)
+    csv_file_path = os.path.join(experiment_folder, "training_validation_losses.csv")
+    
+    # Header row with the specified headings (only write header if the file doesn't exist)
+    header = ["Epoch", "Training Loss", "Validation Loss"]
+    
+    # Check if the file already exists
+    file_exists = os.path.exists(csv_file_path)
+    
+    # If the file doesn't exist, write the header
+    if not file_exists:
+        with open(csv_file_path, mode='w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(header)
+            
+    # Training loop
+    for epoch in range(num_epochs):
+        print(f"\nEpoch {epoch + 1}/{num_epochs}")
+        model.train()  # Set model to training mode
+        
+        running_loss = 0.0
+        correct_predictions = 0
+        total_samples = 0
+        class_counts = [0] * 3  # Assuming 3 classes, update if needed
+    
+        # Training phase with tqdm progress bar
+        for images, labels, _ in tqdm(train_loader, desc="Training", leave=False):
             images, labels = images.to(device), labels.to(device)
-
+    
+            # Zero the parameter gradients
+            optimizer.zero_grad()
+    
             # Forward pass
             outputs = model(images)
             print(f"Outputs (Raw): {outputs}")  # Log raw outputs
             loss = criterion(outputs, labels)
-
-            # Track validation loss and accuracy
-            val_loss += loss.item() * images.size(0)
-            _, predicted = torch.max(outputs, 1)
-            val_correct_predictions += (predicted == labels).sum().item()
-            val_total_samples += labels.size(0)
             
-            # Update confusion matrix
-            val_cm.update(predicted, labels)
-
-            # Update class counts for validation
-            for label in labels:
-                val_class_counts[label.item()] += 1
-
-            # Print predicted vs actual labels for each batch
-            for i in range(len(labels)):
-                print(f"Predicted: {predicted[i].item()}, Actual: {labels[i].item()}")
-
-    val_epoch_loss = val_loss / val_total_samples
-    val_epoch_accuracy = val_correct_predictions / val_total_samples
-    print(f"Validation Loss: {val_epoch_loss:.4f}, Validation Accuracy: {val_epoch_accuracy:.4f}")
+            # Backward pass and optimization
+            loss.backward()
+            optimizer.step()
     
-    # Print class distribution during validation
-    print(f"Validation Class Distribution: {val_class_counts}")
-
-    # Store validation loss for plotting
-    val_losses.append(val_epoch_loss)
-    
-    # Compute and plot confusion matrix for validation
-    cm_val = val_cm.compute()
-    print(f"Validation Confusion Matrix:\n{cm_val}")
-    sns.heatmap(cm_val.cpu().numpy(), annot=True, fmt="d", cmap="Blues", 
-                xticklabels=range(num_classes), yticklabels=range(num_classes))
-    plt.xlabel('Predicted')
-    plt.ylabel('Actual')
-    plt.title(f'Validation Confusion Matrix - Epoch {epoch + 1}')
-    output_path_val = os.path.join(val_folder, f"validation_confusion_matrix_epoch_{epoch + 1}.png")
-    plt.savefig(output_path_val)  # Save the plot
-    plt.clf()  # Clear the plot for the next iteration
-    print(f"Validation Confusion Matrix saved to: {output_path_val}")
-
-    val_cm.reset()  # Reset confusion matrix tracker for next epoch
-    print(f"Validation Loss: {val_epoch_loss:.4f}, Validation Accuracy: {val_epoch_accuracy:.4f}")
-
-    # Save the model if it achieves better validation accuracy
-    if val_epoch_accuracy > best_val_accuracy:
-        best_val_accuracy = val_epoch_accuracy
-        torch.save(model.state_dict(), 'best_model.pth')  # Save the best model
-        print("Saved the model with improved validation accuracy.")
-
-# End of training loop
-print("Training complete.")
-
-# Plotting the training and validation losses
-plt.figure(figsize=(10, 6))
-plt.plot(range(1, num_epochs + 1), train_losses, label='Training Loss', color='blue')
-plt.plot(range(1, num_epochs + 1), val_losses, label='Validation Loss', color='red')
-plt.xlabel('Epochs')
-plt.ylabel('Loss')
-plt.title('Training and Validation Losses Over Epochs')
-plt.legend()
-plt.grid(True)
-
-# Save the plot to the current working directory
-output_path = os.path.join(experiment_folder, "training_validation_loss.png")
-plt.savefig(output_path)  # Save the plot
-plt.clf()  # Clear the plot to free memory for future use
-print(f"Training and Validation Loss plot saved to: {output_path}")
-
-# Test model function with tqdm progress bar
-def test_model(model, test_loader):
-    model.eval()  # Set model to evaluation mode
-    correct_predictions = 0
-    total_samples = 0
-    test_class_counts = [0] * 3  # Assuming 3 classes, update if needed
-    all_labels = []
-    all_predictions = []
-    with torch.no_grad():  # Disable gradients for testing
-        for images, labels, _ in tqdm(test_loader, desc="Testing", leave=False):
-            images, labels = images.to(device), labels.to(device)
-            outputs = model(images)
+            # Track training loss and accuracy
+            running_loss += loss.item() * images.size(0)
             _, predicted = torch.max(outputs, 1)
             correct_predictions += (predicted == labels).sum().item()
             total_samples += labels.size(0)
             
-            # Store labels and predictions for confusion matrix
-            all_labels.extend(labels.cpu().numpy())
-            all_predictions.extend(predicted.cpu().numpy())
-
-            # Update class counts for testing
+            # Update confusion matrix
+            train_cm.update(predicted, labels)
+    
+            # Update class counts
             for label in labels:
-                test_class_counts[label.item()] += 1
-
+                class_counts[label.item()] += 1
+            
             # Print predicted vs actual labels for each batch
             for i in range(len(labels)):
                 print(f"Predicted: {predicted[i].item()}, Actual: {labels[i].item()}")
-
-    avg_accuracy = correct_predictions / total_samples
-    print(f"Test Accuracy: {avg_accuracy:.4f}")
     
-    # Print class distribution during testing
-    print(f"Test Class Distribution: {test_class_counts}")
+        train_epoch_loss = running_loss / total_samples
+        train_epoch_accuracy = correct_predictions / total_samples
+        print(f"Training Loss: {train_epoch_loss:.4f}, Training Accuracy: {train_epoch_accuracy:.4f}")
+        
+        # Print class distribution during training
+        print(f"Training Class Distribution: {class_counts}")
+        
+        # **Call the scheduler here at the end of each epoch to update the learning rate**
+        scheduler.step()
     
-     # Generate confusion matrix
-    cm_test = confusion_matrix(all_labels, all_predictions, labels=range(3))
-    print(f"Test Confusion Matrix:\n{cm_test}")
+        # Store training loss for plotting
+        train_losses.append(train_epoch_loss)
+        
+        # Compute and plot confusion matrix for training
+        cm_train = train_cm.compute()
+        print(f"Training Confusion Matrix:\n{cm_train}")
+        sns.heatmap(cm_train.cpu().numpy(), annot=True, fmt="d", cmap="Blues", 
+                    xticklabels=range(num_classes), yticklabels=range(num_classes))
+        plt.xlabel('Predicted')
+        plt.ylabel('Actual')
+        plt.title(f'Training Confusion Matrix - Epoch {start_epoch + 1}')
+        output_path_train = os.path.join(train_folder, f"training_confusion_matrix_epoch_{start_epoch + 1}.png")
+        plt.savefig(output_path_train)  # Save the plot
+        plt.clf()  # Clear the plot for the next iteration
+        print(f"Training Confusion Matrix saved to: {output_path_train}")
+    
+        train_cm.reset()  # Reset confusion matrix tracker for next epoch
+        print(f"Training Loss: {train_epoch_loss:.4f}, Training Accuracy: {train_epoch_accuracy:.4f}")
+    
+        # Validation phase with tqdm progress bar
+        model.eval()  # Set model to evaluation mode
+        val_loss = 0.0
+        val_correct_predictions = 0
+        val_total_samples = 0
+        val_class_counts = [0] * 3  # Assuming 3 classes, update if needed
+    
+        with torch.no_grad():  # Disable gradient computation for validation
+            for images, labels, _ in tqdm(val_loader, desc="Validating", leave=False):
+                images, labels = images.to(device), labels.to(device)
+    
+                # Forward pass
+                outputs = model(images)
+                print(f"Outputs (Raw): {outputs}")  # Log raw outputs
+                loss = criterion(outputs, labels)
+    
+                # Track validation loss and accuracy
+                val_loss += loss.item() * images.size(0)
+                _, predicted = torch.max(outputs, 1)
+                val_correct_predictions += (predicted == labels).sum().item()
+                val_total_samples += labels.size(0)
+                
+                # Update confusion matrix
+                val_cm.update(predicted, labels)
+    
+                # Update class counts for validation
+                for label in labels:
+                    val_class_counts[label.item()] += 1
+    
+                # Print predicted vs actual labels for each batch
+                for i in range(len(labels)):
+                    print(f"Predicted: {predicted[i].item()}, Actual: {labels[i].item()}")
+    
+        val_epoch_loss = val_loss / val_total_samples
+        val_epoch_accuracy = val_correct_predictions / val_total_samples
+        print(f"Validation Loss: {val_epoch_loss:.4f}, Validation Accuracy: {val_epoch_accuracy:.4f}")
+        
+        # Print class distribution during validation
+        print(f"Validation Class Distribution: {val_class_counts}")
+    
+        # Store validation loss for plotting
+        val_losses.append(val_epoch_loss)
+        
+        # Compute and plot confusion matrix for validation
+        cm_val = val_cm.compute()
+        print(f"Validation Confusion Matrix:\n{cm_val}")
+        sns.heatmap(cm_val.cpu().numpy(), annot=True, fmt="d", cmap="Blues", 
+                    xticklabels=range(num_classes), yticklabels=range(num_classes))
+        plt.xlabel('Predicted')
+        plt.ylabel('Actual')
+        plt.title(f'Validation Confusion Matrix - Epoch {start_epoch + 1}')
+        output_path_val = os.path.join(val_folder, f"validation_confusion_matrix_epoch_{start_epoch + 1}.png")
+        plt.savefig(output_path_val)  # Save the plot
+        plt.clf()  # Clear the plot for the next iteration
+        print(f"Validation Confusion Matrix saved to: {output_path_val}")
+    
+        val_cm.reset()  # Reset confusion matrix tracker for next epoch
+        print(f"Validation Loss: {val_epoch_loss:.4f}, Validation Accuracy: {val_epoch_accuracy:.4f}")
+    
+        # Save the model if it achieves better validation accuracy
+        if val_epoch_accuracy > best_val_accuracy:
+            best_val_accuracy = val_epoch_accuracy  # Update the best accuracy
+            torch.save({
+                "epoch": epoch + 1,  # Save next epoch to start from
+                "model_state": model.state_dict(),  # Save model weights
+                "optimizer_state": optimizer.state_dict(),  # Save optimizer state
+                "scheduler_state": scheduler.state_dict(),  # Save scheduler state
+                "best_val_accuracy": best_val_accuracy  # Save best validation accuracy
+            }, model_path)
 
-    # Plot confusion matrix
-    sns.heatmap(cm_test, annot=True, fmt="d", cmap="Blues", 
-                xticklabels=range(3), yticklabels=range(3))
-    plt.xlabel('Predicted')
-    plt.ylabel('Actual')
-    plt.title('Test Confusion Matrix')
+            print(f"Saved model at epoch {epoch + 1} with improved validation accuracy: {best_val_accuracy:.4f}")
+            
+        # Save the training and validation losses to the CSV file after each epoch
+        with open(csv_file_path, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            # Write the current epoch's training and validation losses
+            writer.writerow([epoch + 1, train_epoch_loss, val_epoch_loss])
 
-    # Save confusion matrix plot
-    output_path_test = os.path.join(test_folder, "test_confusion_matrix.png")
-    plt.savefig(output_path_test)
-    plt.clf()  # Clear the plot for the next use
-    print(f"Test Confusion Matrix saved to: {output_path_test}")
+    print(f"Epoch {start_epoch + 1} Training and Validation Losses saved to: {csv_file_path}")
+    
+    # End of training loop
+    print("Training complete.")
+        
+    # Plotting the training and validation losses
+    plt.figure(figsize=(10, 6))
+    plt.plot(range(1, num_epochs + 1), train_losses, label='Training Loss', color='blue')
+    plt.plot(range(1, num_epochs + 1), val_losses, label='Validation Loss', color='red')
+    plt.xlabel('Epochs')
+    plt.ylabel('Loss')
+    plt.title('Training and Validation Losses Over Epochs')
+    plt.legend()
+    plt.grid(True)
+    
+    # Save the plot to the current working directory
+    output_path = os.path.join(experiment_folder, "training_validation_loss.png")
+    plt.savefig(output_path)  # Save the plot
+    plt.clf()  # Clear the plot to free memory for future use
+    print(f"Training and Validation Loss plot saved to: {output_path}")
+    
+    # Test model function with tqdm progress bar
+    def test_model(model, test_loader):
+        model.eval()  # Set model to evaluation mode
+        correct_predictions = 0
+        total_samples = 0
+        test_class_counts = [0] * 3  # Assuming 3 classes, update if needed
+        all_labels = []
+        all_predictions = []
+        with torch.no_grad():  # Disable gradients for testing
+            for images, labels, _ in tqdm(test_loader, desc="Testing", leave=False):
+                images, labels = images.to(device), labels.to(device)
+                outputs = model(images)
+                _, predicted = torch.max(outputs, 1)
+                correct_predictions += (predicted == labels).sum().item()
+                total_samples += labels.size(0)
+                
+                # Store labels and predictions for confusion matrix
+                all_labels.extend(labels.cpu().numpy())
+                all_predictions.extend(predicted.cpu().numpy())
+    
+                # Update class counts for testing
+                for label in labels:
+                    test_class_counts[label.item()] += 1
+    
+                # Print predicted vs actual labels for each batch
+                for i in range(len(labels)):
+                    print(f"Predicted: {predicted[i].item()}, Actual: {labels[i].item()}")
+    
+        avg_accuracy = correct_predictions / total_samples
+        print(f"Test Accuracy: {avg_accuracy:.4f}")
+        
+        # Print class distribution during testing
+        print(f"Test Class Distribution: {test_class_counts}")
+        
+         # Generate confusion matrix
+        cm_test = confusion_matrix(all_labels, all_predictions, labels=range(3))
+        print(f"Test Confusion Matrix:\n{cm_test}")
+    
+        # Plot confusion matrix
+        sns.heatmap(cm_test, annot=True, fmt="d", cmap="Blues", 
+                    xticklabels=range(3), yticklabels=range(3))
+        plt.xlabel('Predicted')
+        plt.ylabel('Actual')
+        plt.title('Test Confusion Matrix')
+    
+        # Save confusion matrix plot
+        output_path_test = os.path.join(test_folder, "test_confusion_matrix.png")
+        plt.savefig(output_path_test)
+        plt.clf()  # Clear the plot for the next use
+        print(f"Test Confusion Matrix saved to: {output_path_test}")
+    
+    
+    # Run the test phase after training
+    test_model(model, test_loader)
+    
+    # Move to next experiment
+    experiment_num += 1
+    if experiment_num <= 10:  # Ensure it does not go beyond Experiment_10
+        experiment_folder = get_experiment_folder(experiment_num)
+        os.makedirs(experiment_folder, exist_ok=True)
+        model_path = os.path.join(experiment_folder, "best_model.pth")  # Update model path
 
-
-# Run the test phase after training
-test_model(model, test_loader)
-
-
-# ## Saving the Training Losses and Validation Losses to a CSV file
-
-# In[39]:
-
-
-import csv
-import os
-
-# Ensure the experiment folder exists
-os.makedirs(experiment_folder, exist_ok=True)
-
-# Create the CSV file path (inside the experiment folder)
-csv_file_path = os.path.join(experiment_folder, "training_validation_losses.csv")
-
-# Header row with the specified headings
-header = ["Epoch", "Training Loss", "Validation Loss"]
-
-# Prepare the data to be saved (epoch-wise losses)
-losses_data = []
-
-# Add the header first, regardless of whether the file exists or not
-losses_data.append(header)
-
-# Add the epoch losses to the data (train and validation losses for each epoch)
-for epoch in range(num_epochs):
-    # Safely append the epoch data, ensuring that the lists are not out of range
-    # If train_losses or val_losses are shorter than num_epochs, handle the missing data
-    train_loss = train_losses[epoch] if epoch < len(train_losses) else None
-    val_loss = val_losses[epoch] if epoch < len(val_losses) else None
-    losses_data.append([epoch + 1, train_loss, val_loss])
-
-# Check if the file already exists
-file_exists = os.path.exists(csv_file_path)
-
-# Open the file in write mode to overwrite existing content or create a new file
-with open(csv_file_path, mode='w', newline='') as file:
-    writer = csv.writer(file)
-
-    # If the file exists, we write the header and the new data (clearing existing content first)
-    if file_exists:
-        # Write the header and the new epoch-wise loss data
-        writer.writerows(losses_data)
-    else:
-        # If the file doesn't exist, just write the new data with the header
-        writer.writerow(header)
-        writer.writerows(losses_data)
-
-print(f"Training and Validation Losses saved to: {csv_file_path}")
+print("\nAll 10 Experiments Completed.")
 
 
 # In[ ]:
