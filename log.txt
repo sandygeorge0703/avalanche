@@ -38433,3 +38433,49 @@ Epoch 0 ended.
 	Top1_Acc_Stream/eval_phase/test_stream = 0.3333
 -- >> Start of training phase << --
 -- Starting training on experience 0 from train stream --
+-- >> Start of training phase << --
+-- Starting training on experience 0 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 1.1068
+	Top1_Acc_Epoch/train_phase/train_stream = 0.2593
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 1.0999
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 0.3333
+-- >> End of eval phase << --
+	Loss_Stream/eval_phase/test_stream = 1.0999
+	Top1_Acc_Stream/eval_phase/test_stream = 0.3333
+-- >> Start of training phase << --
+-- Starting training on experience 0 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 1.1010
+	Top1_Acc_Epoch/train_phase/train_stream = 0.3333
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 1.1009
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 0.3333
+-- >> End of eval phase << --
+	Loss_Stream/eval_phase/test_stream = 1.1009
+	Top1_Acc_Stream/eval_phase/test_stream = 0.3333
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 1.0969
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 0.3333
+-- Starting eval on experience 1 from test stream --
+> Eval on experience 1 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp001 = 1.0975
+	Top1_Acc_Exp/eval_phase/test_stream/Exp001 = 0.4583
+-- Starting eval on experience 2 from test stream --
+> Eval on experience 2 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp002 = 1.0987
+	Top1_Acc_Exp/eval_phase/test_stream/Exp002 = 0.3254
+-- >> End of eval phase << --
+	Loss_Stream/eval_phase/test_stream = 1.0984
+	Top1_Acc_Stream/eval_phase/test_stream = 0.3459
+-- >> Start of training phase << --
+-- Starting training on experience 1 from train stream --
