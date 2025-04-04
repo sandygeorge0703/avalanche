@@ -1,0 +1,708 @@
+-- >> Start of training phase << --
+-- Starting training on experience 0 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0129
+	Top1_Acc_Epoch/train_phase/train_stream = 0.9946
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[2400,    0,    0],
+        [   0,    0,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 0 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[2400,    0,    0],
+        [   0,    0,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 0 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[2400,    0,    0],
+        [   0,    0,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 0 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[2400,    0,    0],
+        [   0,    0,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 0 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[2400,    0,    0],
+        [   0,    0,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 0 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[2400,    0,    0],
+        [   0,    0,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 0 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[2400,    0,    0],
+        [   0,    0,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 0 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[2400,    0,    0],
+        [   0,    0,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 0 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[2400,    0,    0],
+        [   0,    0,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 0 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[2400,    0,    0],
+        [   0,    0,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[1200,    0,    0],
+        [   0,    0,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 16.6989
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 0.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [1200,    0,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 16.6989
+	Top1_Acc_Stream/eval_phase/test_stream = 0.0000
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 16.5501
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 0.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0,    0,    0],
+        [1200,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 16.5501
+	Top1_Acc_Stream/eval_phase/test_stream = 0.0000
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- Starting eval on experience 1 from test stream --
+> Eval on experience 1 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp001 = 16.6989
+	Top1_Acc_Exp/eval_phase/test_stream/Exp001 = 0.0000
+-- Starting eval on experience 2 from test stream --
+> Eval on experience 2 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp002 = 16.5501
+	Top1_Acc_Exp/eval_phase/test_stream/Exp002 = 0.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[1200,    0,    0],
+        [1200,    0,    0],
+        [1200,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 11.0830
+	Top1_Acc_Stream/eval_phase/test_stream = 0.3333
+-- >> Start of training phase << --
+-- Starting training on experience 1 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0120
+	Top1_Acc_Epoch/train_phase/train_stream = 0.9964
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0, 2400,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 1 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0, 2400,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 1 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0, 2400,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 1 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0, 2400,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 1 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0, 2400,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 1 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0, 2400,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 1 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0, 2400,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 1 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0, 2400,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 1 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0, 2400,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 1 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0, 2400,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 22.3338
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 0.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0, 1200,    0],
+        [   0,    0,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 22.3338
+	Top1_Acc_Stream/eval_phase/test_stream = 0.0000
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0, 1200,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 21.6060
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 0.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0,    0,    0],
+        [   0, 1200,    0]])
+	Loss_Stream/eval_phase/test_stream = 21.6060
+	Top1_Acc_Stream/eval_phase/test_stream = 0.0000
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 22.3338
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 0.0000
+-- Starting eval on experience 1 from test stream --
+> Eval on experience 1 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp001 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp001 = 1.0000
+-- Starting eval on experience 2 from test stream --
+> Eval on experience 2 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp002 = 21.6060
+	Top1_Acc_Exp/eval_phase/test_stream/Exp002 = 0.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0, 1200,    0],
+        [   0, 1200,    0],
+        [   0, 1200,    0]])
+	Loss_Stream/eval_phase/test_stream = 14.6466
+	Top1_Acc_Stream/eval_phase/test_stream = 0.3333
+-- >> Start of training phase << --
+-- Starting training on experience 2 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0058
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0,    0,    0],
+        [   0,    0, 2400]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 2 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0,    0,    0],
+        [   0,    0, 2400]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 2 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0,    0,    0],
+        [   0,    0, 2400]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 2 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0,    0,    0],
+        [   0,    0, 2400]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 2 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0,    0,    0],
+        [   0,    0, 2400]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 2 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0,    0,    0],
+        [   0,    0, 2400]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 2 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0,    0,    0],
+        [   0,    0, 2400]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 2 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0,    0,    0],
+        [   0,    0, 2400]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 2 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0,    0,    0],
+        [   0,    0, 2400]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of training phase << --
+-- Starting training on experience 2 from train stream --
+Epoch 0 ended.
+	Loss_Epoch/train_phase/train_stream = 0.0000
+	Top1_Acc_Epoch/train_phase/train_stream = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0,    0,    0],
+        [   0,    0, 2400]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 22.1875
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 0.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0, 1200],
+        [   0,    0,    0],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 22.1875
+	Top1_Acc_Stream/eval_phase/test_stream = 0.0000
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 22.7130
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 0.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0,    0, 1200],
+        [   0,    0,    0]])
+	Loss_Stream/eval_phase/test_stream = 22.7130
+	Top1_Acc_Stream/eval_phase/test_stream = 0.0000
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0,    0],
+        [   0,    0,    0],
+        [   0,    0, 1200]])
+	Loss_Stream/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream = 1.0000
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 from test stream --
+> Eval on experience 0 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp000 = 22.1875
+	Top1_Acc_Exp/eval_phase/test_stream/Exp000 = 0.0000
+-- Starting eval on experience 1 from test stream --
+> Eval on experience 1 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp001 = 22.7130
+	Top1_Acc_Exp/eval_phase/test_stream/Exp001 = 0.0000
+-- Starting eval on experience 2 from test stream --
+> Eval on experience 2 from test stream ended.
+	Loss_Exp/eval_phase/test_stream/Exp002 = 0.0000
+	Top1_Acc_Exp/eval_phase/test_stream/Exp002 = 1.0000
+-- >> End of eval phase << --
+	ConfusionMatrix_Stream/eval_phase/test_stream = 
+tensor([[   0,    0, 1200],
+        [   0,    0, 1200],
+        [   0,    0, 1200]])
+	Loss_Stream/eval_phase/test_stream = 14.9668
+	Top1_Acc_Stream/eval_phase/test_stream = 0.3333
